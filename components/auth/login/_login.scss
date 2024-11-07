@@ -1,0 +1,146 @@
+.login {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &--image {
+      width: 12.5rem;
+      height: max-content;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &--form {
+      width: 100%;
+      max-width: 640px;
+      min-width: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      color: $muted;
+      border: 1px solid $primary;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      & button {
+        width: 100%;
+      }
+      &_header {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          display: block;
+          text-align: center;
+          font-size: 2rem;
+          color: $black-color;
+          font-weight: 600;
+        }
+        span {
+          color: $muted;
+          font-size: 12px;
+          width: 40ch;
+          text-align: center;
+          display: block;
+        }
+      }
+
+      &_input {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+
+        label {
+          width: 100%;
+
+          div {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            i {
+              font-size: 1rem;
+              color: $muted;
+            }
+            span {
+              width: 44px;
+            }
+          }
+        }
+      }
+
+      &_forgetPass {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      p {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &--bottom {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        background-color: #e0e0e0;
+        height: 2.1px;
+        flex-grow: 1;
+        display: block;
+      }
+
+      span {
+        color: $muted;
+      }
+    }
+  }
+}
+
+.form-links {
+  color: $primary;
+  text-decoration: underline;
+  font-weight: 450;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-password {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.verified-icon {
+  height: 42px;
+  width: 42px;
+}

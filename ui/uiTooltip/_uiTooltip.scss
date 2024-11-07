@@ -1,0 +1,37 @@
+#my-tooltip-styles {
+  background-color: $primary;
+  position: absolute;
+}
+.tooltipContainer {
+  padding: 0.5rem 0.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
+  i {
+    font-size: 1rem;
+  }
+}
+.green {
+  background-color: #e7f8f0;
+  color: #41c58e;
+}
+.red {
+  background-color: #f8e7e7;
+  color: #c54141;
+}
+.grey {
+  background-color: #e8f1fd;
+  color: $primary;
+}
+.blue {
+  background-color: #e7e7f8;
+  color: #4143c5;
+}
+.orange {
+  background-color: #f8ece7;
+  color: #c57a41;
+}

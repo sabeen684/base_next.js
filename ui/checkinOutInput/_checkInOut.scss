@@ -1,0 +1,13 @@
+.checkInOut {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  //   &-placeholder {
+  //   }
+  &-inputs {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

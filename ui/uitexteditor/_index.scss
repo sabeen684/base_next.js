@@ -1,0 +1,65 @@
+.texteditor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  position: relative;
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  &-label {
+    color: $text-black;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .required {
+    color: red;
+  }
+  &-input {
+    padding: 0.5rem;
+    border: $border-black !important;
+    border-radius: calc($border-radius / 2);
+    outline: none;
+    background-color: $white-color;
+    color: $text-black !important;
+    width: 100%;
+    font-size: 1rem;
+    resize: vertical;
+
+    &:focus {
+      border: $border-primary !important;
+    }
+    &::placeholder {
+      color: rgba($color: $text-black, $alpha: 0.3);
+    }
+
+    &::marker {
+      color: $black-color;
+    }
+
+    &.error {
+      border: $border-error !important;
+    }
+  }
+
+  &-error {
+    font-size: 1rem;
+    color: $error-color;
+  }
+
+  i {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 1rem;
+    font-size: 1.3rem;
+    color: $text-black;
+    cursor: pointer;
+  }
+}

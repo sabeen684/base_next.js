@@ -1,0 +1,87 @@
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+
+  &-label {
+    color: $text-black;
+    font-size: 1rem;
+    font-weight: 600;
+    span {
+      color: red;
+    }
+  }
+  &-wrapper {
+    width: 100%;
+  }
+
+  &-input {
+    padding: 0.5rem;
+    border: $border-black;
+    border-radius: calc($border-radius / 2);
+    height: 2.5rem;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: $text-black;
+    position: relative;
+
+    &::marker {
+      color: $black-color;
+    }
+    &::placeholder {
+      color: rgba($color: $text-black, $alpha: 0.3);
+    }
+    &:focus {
+      border: $border-primary;
+    }
+    &:disabled {
+      opacity: 0.7;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      border-radius: $border-radius;
+    }
+
+    &.error {
+      border: $border-error;
+    }
+  }
+  .nepali-date-picker {
+    width: 100%;
+    position: relative;
+    & calendar {
+      z-index: 19;
+    }
+  }
+
+  &-error {
+    font-size: 1rem;
+    color: $error-color;
+  }
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  i {
+    position: absolute;
+    top: 0%;
+    right: 1rem;
+    font-size: 1rem;
+    color: $text-black;
+    cursor: pointer;
+  }
+}

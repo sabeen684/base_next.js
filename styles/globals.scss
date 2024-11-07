@@ -1,0 +1,165 @@
+
+@import './keyframe';
+@import './colors';
+@import './default';
+@import '../components/auth/login/login';
+@import '../ui/ui';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "SF Pro Display", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+}
+::-webkit-scrollbar {
+  width: 0.6125rem;
+  background-color: transparent;
+  height: 0.6125rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 1rem;
+}
+body {
+  background: $foreground;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.layout {
+  background: $background;
+  display: flex;
+  width: 100%;
+
+  @media (min-width: 1080px) {
+    gap: 1rem;
+  }
+
+  @media (min-width: 1220px) {
+    gap: 0.875rem;
+  }
+
+  &-sidemenu {
+    display: none;
+    @media (min-width: 1080px) {
+      display: block;
+    }
+  }
+}
+
+.layout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $background-color;
+  padding: 0 0 0 1rem;
+}
+
+.filters-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 22px;
+  flex-wrap: wrap;
+
+  &--buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+.page {
+  padding: 0 1rem 1rem 1rem;
+
+  @media (min-width: 1080px) {
+    padding: 0 1rem 1rem 0;
+  }
+
+  @media (min-width: 1220px) {
+    padding: 0 2rem 2rem 0;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: $foreground;
+  border-radius: $radius;
+  padding: 18px 22px;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+
+  &-header {
+    &--title {
+      font-weight: 500;
+    }
+  }
+}
+
+.table-actions {
+  border: 1px solid $muted-border;
+  border-radius: $radius;
+  width: 100%;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+
+  &--btn {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 40px;
+
+    &:hover {
+      background: $muted-border;
+    }
+  }
+
+  &--edit {
+    color: $text-primary;
+    border-right: 1px solid $muted-border;
+  }
+
+  &--delete {
+    color: $danger;
+  }
+
+  &--checkout {
+    color: $primary;
+  }
+}
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  i {
+    font-size: 0.8rem;
+  }
+}
+
+.categories {
+  padding: 1rem;
+  background-color: $background;
+}

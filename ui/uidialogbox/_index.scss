@@ -1,0 +1,25 @@
+.dialogbox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  &-heading {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  &-message {
+    color: $text-black;
+  }
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    &--btn {
+      min-width: 18%;
+      width: max-content;
+      padding: 0 1.2rem;
+    }
+  }
+}

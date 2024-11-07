@@ -1,0 +1,141 @@
+.filelistinput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+
+  position: relative;
+
+  & .required {
+    color: red;
+  }
+  &-label {
+    color: $text-black;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &-input {
+    width: 100%;
+    // padding: 0.8rem;
+    border: $border;
+    border-radius: calc($border-radius);
+    background-color: $white-color;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+
+    &--add {
+      border: $border-dashed-primary;
+      border-radius: calc($border-radius/2);
+      background-color: $white-color;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      position: relative;
+
+      width: 100%;
+      height: 13rem;
+      color: rgba($color: $text-black, $alpha: 0.7);
+
+      &_orline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+        width: 100%;
+        &__line {
+          width: 5rem;
+          // color: rgba($color: $text-black, $alpha: 0.1) !important;
+          border-top: 2px solid rgba($color: $text-black, $alpha: 0.3) !important;
+          // height: 2px;
+        }
+        &__text {
+          // color: $text-black;
+          font-weight: 600;
+          font-size: 0.8rem;
+        }
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+        cursor: pointer;
+      }
+      i {
+        font-size: 3rem !important;
+        color: $primary;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    &--image {
+      width: 13rem;
+      height: 13rem;
+      border: $border;
+      border-radius: calc($border-radius/2);
+      background-color: $white-color;
+      position: relative;
+
+      i {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(10%, -10%);
+        background-color: $error-color;
+        color: $text-white;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: $border-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        font-size: 1rem;
+      }
+    }
+
+    &.error {
+      border: $border-error;
+    }
+  }
+
+  &-error {
+    font-size: 1rem;
+    color: $error-color;
+  }
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
